@@ -1,7 +1,7 @@
-const greetingDisplay = document.getElementBiId("greeting-display");
+const greetingDisplay = document.getElementById("greeting-display")
 const btn = document.getElementById("btn")
 
-btn.addEventListener("click", writeGreeting)
+btn.addEventListener('click', writeGreeting)
 
 const greetings = [
     "Santa Claus is coming to town!",
@@ -11,3 +11,8 @@ const greetings = [
     "Jingle all the way!",
 ]
 
+function writeGreeting() {
+    let item = Math.floor(Math.random()* greetings.length)
+    console.log(item)
+    greetingDisplay.textContent = greetings[item]
+}
